@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container mt-4 ">
+    <form action="/edit-post/<%= idx %>" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" value="<%= title[idx] %>">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="desc"><%= desc[idx] %></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

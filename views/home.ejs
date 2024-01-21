@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.operation) { %>
+    <% if(operation === "create") { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Your blog has been created successfully!</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+    <% if(operation === "update") { %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Your blog has been updated successfully!</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+    <% if(operation === "delete") { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Your blog has been deleted successfully!</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+<% } %>
+
+<div class="container px-4 py-5" id="hanging-icons">
+    <% if(title.length === 0) { %>
+        <h2>There are no Blogs to view!</h2>
+        <a href="/create"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 mt-4">Create new Blog</button></a>
+    <% } else { %>
+        <h2 class="pb-4 border-bottom mb-3">Your Blogs</h2>
+    <% } %>
+    <% for(let i = 0; i < title.length; i++) { %>
+        <div class="home-container">
+            <h4> <%= i+1 %>. <%= title[i] %> </h4>
+            <a href="/blog/<%= i %>"><button class="btn btn-primary">View</button></a>
+        </div>
+    <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

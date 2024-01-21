@@ -1,0 +1,26 @@
+#logo {
+    height: 48px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.home-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.blog a{
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    height: 10vh;
+}
