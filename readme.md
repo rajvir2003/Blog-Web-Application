@@ -1,0 +1,2 @@
+# Blog Web App <br>
+This repository contains a straightforward blog web application built using Node.js, Express, EJS, and Bootstrap. With this app, users can effortlessly create, read, update, and delete blogs. It leverages the power of Node.js for the server, Express as the web application framework, EJS for templating, and Bootstrap for a clean and responsive user interface. To get started, clone the repository, install dependencies, configure the environment, and run the application. Feel free to contribute or customize the project to suit your needs.
